@@ -14,19 +14,16 @@ from src.data import load_dataset
 st.set_page_config(page_title='ML Assignment 2 - Classification Models', layout='wide')
 
 
+
 @st.cache_data
 def load_metrics_table():
-    p = Path('model') / 'model_comparison_metrics.csv'
-    return pd.read_csv(p)
-
+    return pd.read_csv(MODEL_DIR / "model_comparison_metrics.csv")
 
 @st.cache_data
 def load_artifacts():
-    with open(Path('model') / 'artifacts.json', 'r', encoding='utf-8') as f:
+    with open(MODEL_DIR / "artifacts.json", "r", encoding="utf-8") as f:
         return json.load(f)
-
-
-
+        
 @st.cache_resource
 def load_model(model_file: str):
     # Normalize Windows-style backslashes for Linux/Mac deployments
