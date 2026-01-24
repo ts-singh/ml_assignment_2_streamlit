@@ -17,7 +17,8 @@ st.set_page_config(page_title='ML Assignment 2 - Classification Models', layout=
 
 @st.cache_data
 def load_metrics_table():
-    return pd.read_csv(MODEL_DIR / "model_comparison_metrics.csv")
+    p = Path('model') / 'model_comparison_metrics.csv'
+    return pd.read_csv(p)
 
 @st.cache_data
 def load_artifacts():
