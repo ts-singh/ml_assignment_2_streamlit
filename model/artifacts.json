@@ -1,0 +1,134 @@
+{
+  "Logistic Regression": {
+    "model_file": "model\\Logistic_Regression.joblib",
+    "confusion_matrix": [
+      [
+        71,
+        1
+      ],
+      [
+        3,
+        39
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n      benign       0.96      0.99      0.97        72\n   malignant       0.97      0.93      0.95        42\n\n    accuracy                           0.96       114\n   macro avg       0.97      0.96      0.96       114\nweighted avg       0.97      0.96      0.96       114\n",
+    "metrics": {
+      "Accuracy": 0.9649122807017544,
+      "AUC": 0.996031746031746,
+      "Precision": 0.975,
+      "Recall": 0.9285714285714286,
+      "F1": 0.9512195121951219,
+      "MCC": 0.9245181185940877
+    }
+  },
+  "Decision Tree": {
+    "model_file": "model\\Decision_Tree.joblib",
+    "confusion_matrix": [
+      [
+        68,
+        4
+      ],
+      [
+        4,
+        38
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n      benign       0.94      0.94      0.94        72\n   malignant       0.90      0.90      0.90        42\n\n    accuracy                           0.93       114\n   macro avg       0.92      0.92      0.92       114\nweighted avg       0.93      0.93      0.93       114\n",
+    "metrics": {
+      "Accuracy": 0.9298245614035088,
+      "AUC": 0.9246031746031745,
+      "Precision": 0.9047619047619048,
+      "Recall": 0.9047619047619048,
+      "F1": 0.9047619047619048,
+      "MCC": 0.8492063492063492
+    }
+  },
+  "kNN": {
+    "model_file": "model\\kNN.joblib",
+    "confusion_matrix": [
+      [
+        71,
+        1
+      ],
+      [
+        4,
+        38
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n      benign       0.95      0.99      0.97        72\n   malignant       0.97      0.90      0.94        42\n\n    accuracy                           0.96       114\n   macro avg       0.96      0.95      0.95       114\nweighted avg       0.96      0.96      0.96       114\n",
+    "metrics": {
+      "Accuracy": 0.956140350877193,
+      "AUC": 0.982473544973545,
+      "Precision": 0.9743589743589743,
+      "Recall": 0.9047619047619048,
+      "F1": 0.9382716049382716,
+      "MCC": 0.9058238738943076
+    }
+  },
+  "Naive Bayes": {
+    "model_file": "model\\Naive_Bayes.joblib",
+    "confusion_matrix": [
+      [
+        72,
+        0
+      ],
+      [
+        7,
+        35
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n      benign       0.91      1.00      0.95        72\n   malignant       1.00      0.83      0.91        42\n\n    accuracy                           0.94       114\n   macro avg       0.96      0.92      0.93       114\nweighted avg       0.94      0.94      0.94       114\n",
+    "metrics": {
+      "Accuracy": 0.9385964912280702,
+      "AUC": 0.9933862433862434,
+      "Precision": 1.0,
+      "Recall": 0.8333333333333334,
+      "F1": 0.9090909090909091,
+      "MCC": 0.8714893406611902
+    }
+  },
+  "Random Forest (Ensemble)": {
+    "model_file": "model\\Random_Forest_Ensemble.joblib",
+    "confusion_matrix": [
+      [
+        72,
+        0
+      ],
+      [
+        3,
+        39
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n      benign       0.96      1.00      0.98        72\n   malignant       1.00      0.93      0.96        42\n\n    accuracy                           0.97       114\n   macro avg       0.98      0.96      0.97       114\nweighted avg       0.97      0.97      0.97       114\n",
+    "metrics": {
+      "Accuracy": 0.9736842105263158,
+      "AUC": 0.9943783068783069,
+      "Precision": 1.0,
+      "Recall": 0.9285714285714286,
+      "F1": 0.9629629629629629,
+      "MCC": 0.9441549509633318
+    }
+  },
+  "XGBoost (Ensemble)": {
+    "model_file": "model\\XGBoost_Ensemble.joblib",
+    "confusion_matrix": [
+      [
+        72,
+        0
+      ],
+      [
+        4,
+        38
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n      benign       0.95      1.00      0.97        72\n   malignant       1.00      0.90      0.95        42\n\n    accuracy                           0.96       114\n   macro avg       0.97      0.95      0.96       114\nweighted avg       0.97      0.96      0.96       114\n",
+    "metrics": {
+      "Accuracy": 0.9649122807017544,
+      "AUC": 0.9923941798941799,
+      "Precision": 1.0,
+      "Recall": 0.9047619047619048,
+      "F1": 0.95,
+      "MCC": 0.9258200997725514
+    }
+  }
+}
