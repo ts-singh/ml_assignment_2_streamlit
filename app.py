@@ -26,19 +26,25 @@ def load_artifacts():
         return json.load(f)
 
 
+
 @st.cache_resource
 def load_model(model_file: str):
-    # Normalize Windows backslashes -> forward slashes
+    # Normalize Windows-style backslashes for Linux/Mac deployments
     model_file = model_file.replace("\\", "/")
 
-    # 1) Try path as stored (relative to app folder)
-    p = (BASE_DIR / model_file).resolve()
+    # If artifacts.json has something like "model/Logistic_Regression.joblib"
+    p = Path(model_file)
 
-    # 2) If still not found, try only the filename inside model/
+    # Make relative paths resolve from app folder
+    if not p.is_absolute():
+        p = (BASE_DIR / p).resolve()
+
+    # If still not found, try just the filename inside MODEL_DIR
     if not p.exists():
         p = MODEL_DIR / Path(model_file).name
 
     return joblib.load(p)
+
 
 def plot_confusion_matrix(cm, labels=('benign', 'malignant')):
     fig, ax = plt.subplots(figsize=(4.5, 4))
