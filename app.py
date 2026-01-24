@@ -22,7 +22,7 @@ def load_metrics_table():
 
 @st.cache_data
 def load_artifacts():
-    with open(MODEL_DIR / "artifacts.json", "r", encoding="utf-8") as f:
+    with open(Path('model') / 'artifacts.json', 'r', encoding='utf-8') as f:
         return json.load(f)
         
 @st.cache_resource
