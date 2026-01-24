@@ -14,34 +14,21 @@ from src.data import load_dataset
 st.set_page_config(page_title='ML Assignment 2 - Classification Models', layout='wide')
 
 
-
 @st.cache_data
 def load_metrics_table():
     p = Path('model') / 'model_comparison_metrics.csv'
     return pd.read_csv(p)
 
+
 @st.cache_data
 def load_artifacts():
     with open(Path('model') / 'artifacts.json', 'r', encoding='utf-8') as f:
         return json.load(f)
-        
+
+
 @st.cache_resource
 def load_model(model_file: str):
-    # Normalize Windows-style backslashes for Linux/Mac deployments
-    model_file = model_file.replace("\\", "/")
-
-    # If artifacts.json has something like "model/Logistic_Regression.joblib"
-    p = Path(model_file)
-
-    # Make relative paths resolve from app folder
-    if not p.is_absolute():
-        p = (BASE_DIR / p).resolve()
-
-    # If still not found, try just the filename inside MODEL_DIR
-    if not p.exists():
-        p = MODEL_DIR / Path(model_file).name
-
-    return joblib.load(p)
+    return joblib.load(model_file)
 
 
 def plot_confusion_matrix(cm, labels=('benign', 'malignant')):
