@@ -28,8 +28,17 @@ def load_artifacts():
 
 @st.cache_resource
 def load_model(model_file: str):
-    return joblib.load(model_file)
+    # Normalize Windows backslashes -> forward slashes
+    model_file = model_file.replace("\\", "/")
 
+    # 1) Try path as stored (relative to app folder)
+    p = (BASE_DIR / model_file).resolve()
+
+    # 2) If still not found, try only the filename inside model/
+    if not p.exists():
+        p = MODEL_DIR / Path(model_file).name
+
+    return joblib.load(p)
 
 def plot_confusion_matrix(cm, labels=('benign', 'malignant')):
     fig, ax = plt.subplots(figsize=(4.5, 4))
