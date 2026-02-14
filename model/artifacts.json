@@ -1,6 +1,6 @@
 {
   "Logistic Regression": {
-    "model_file": "model\Logistic_Regression.joblib",
+    "model_file": "model/Logistic_Regression.joblib",
     "confusion_matrix": [
       [
         71,
@@ -22,7 +22,7 @@
     }
   },
   "Decision Tree": {
-    "model_file": "model\Decision_Tree.joblib",
+    "model_file": "model/Decision_Tree.joblib",
     "confusion_matrix": [
       [
         68,
@@ -44,7 +44,7 @@
     }
   },
   "kNN": {
-    "model_file": "model\kNN.joblib",
+    "model_file": "model/kNN.joblib",
     "confusion_matrix": [
       [
         71,
@@ -66,7 +66,7 @@
     }
   },
   "Naive Bayes": {
-    "model_file": "model\Naive_Bayes.joblib",
+    "model_file": "model/Naive_Bayes.joblib",
     "confusion_matrix": [
       [
         72,
@@ -88,7 +88,7 @@
     }
   },
   "Random Forest (Ensemble)": {
-    "model_file": "model\Random_Forest_Ensemble.joblib",
+    "model_file": "model/Random_Forest_Ensemble.joblib",
     "confusion_matrix": [
       [
         72,
@@ -110,7 +110,7 @@
     }
   },
   "XGBoost (Ensemble)": {
-    "model_file": "model\XGBoost_Ensemble.joblib",
+    "model_file": "model/XGBoost_Ensemble.joblib",
     "confusion_matrix": [
       [
         72,
@@ -133,3 +133,4 @@
   }
 
 }
+
