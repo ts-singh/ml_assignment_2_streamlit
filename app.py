@@ -71,8 +71,8 @@ artifacts = load_artifacts()
 
 with st.sidebar:
     st.header('Controls')
-    model_name = st.selectbox('Select a model', metrics_df['ML Model Name'].tolist())
-    show_holdout = st.checkbox('Show built-in holdout evaluation (default)', value=True)
+    model_name = st.selectbox('Select model From Drop Down', metrics_df['ML Model Name'].tolist())
+    show_holdout = st.checkbox('Show Default evaluation ', value=True)
     st.divider()
     st.subheader('Upload test CSV (optional)')
     
