@@ -29,11 +29,40 @@ st.markdown(
     /* ===== Sidebar ===== */
     section[data-testid="stSidebar"] {
         background: linear-gradient(180deg, #1F3C88 0%, #2952A3 100%);
-        color: white;
     }
 
-    section[data-testid="stSidebar"] * {
+    /* Sidebar headings */
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3,
+    section[data-testid="stSidebar"] label,
+    section[data-testid="stSidebar"] p {
         color: white !important;
+    }
+
+    /* ===== FIX: Dropdown visibility ===== */
+
+    /* Selectbox main area */
+    section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
+        background: white;
+        color: black !important;
+        border-radius: 8px;
+    }
+
+    /* Selected value text */
+    section[data-testid="stSidebar"] .stSelectbox span {
+        color: black !important;
+    }
+
+    /* Dropdown menu list */
+    div[role="listbox"] {
+        background: white !important;
+        color: black !important;
+    }
+
+    /* Dropdown options */
+    div[role="option"] {
+        color: black !important;
     }
 
     /* ===== Buttons ===== */
@@ -63,7 +92,7 @@ st.markdown(
         box-shadow: 0 4px 18px rgba(0,0,0,0.08);
     }
 
-    /* ===== Input Widgets ===== */
+    /* ===== Input Widgets (Main area) ===== */
     .stSelectbox, .stNumberInput, .stTextInput {
         background: white;
         border-radius: 10px;
@@ -74,7 +103,7 @@ st.markdown(
         background: linear-gradient(90deg, #1F3C88, #4A90E2);
     }
 
-    /* ===== Footer hide (optional) ===== */
+    /* ===== Footer hide ===== */
     footer {visibility: hidden;}
 
     </style>
