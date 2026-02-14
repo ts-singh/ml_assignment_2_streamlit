@@ -63,8 +63,8 @@ def compute_user_metrics(y_true, y_pred, y_score=None):
     return m, cm, rep
 
 
-st.title('Machine Learning Assignment 2 - End-to-End Classification & Streamlit')
-st.write('This app loads six classification models trained on the Breast Cancer Wisconsin (Diagnostic) dataset (binary classification).')
+st.title('My ML Assignment 2 - End-to-End Classification & Streamlit')
+st.write('Six trained classification models based on the Breast Cancer Wisconsin (Diagnostic) dataset are integrated into this application for two-class prediction.')
 
 metrics_df = load_metrics_table()
 artifacts = load_artifacts()
