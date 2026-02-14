@@ -51,12 +51,6 @@ Comparison Table with the evaluation metrics
 | Naive Bayes | Fast baseline; assumes feature independence which may limit performance when features are correlated. |
 | Random Forest (Ensemble) | Performs best overall on this dataset (high Accuracy/AUC and balanced Precision-Recall). |
 | XGBoost (Ensemble) | Boosted trees often achieve top performance by sequentially correcting errors from previous trees. |
-| Logistic Regression | 0.9649 | 0.9960 | 0.9750 | 0.9286 | 0.9512 | 0.9245 |
-| Decision Tree | 0.9298 | 0.9246 | 0.9048 | 0.9048 | 0.9048 | 0.8492 |
-| kNN | 0.9561 | 0.9825 | 0.9744 | 0.9048 | 0.9383 | 0.9058 |
-| Naive Bayes | 0.9386 | 0.9934 | 1.0000 | 0.8333 | 0.9091 | 0.8715 |
-| Random Forest (Ensemble) | 0.9737 | 0.9944 | 1.0000 | 0.9286 | 0.9630 | 0.9442 |
-| XGBoost (Ensemble) | 0.9649 | 0.9924 | 1.0000 | 0.9048 | 0.9500 | 0.9258 |
 
 ## Project structure
 ```
