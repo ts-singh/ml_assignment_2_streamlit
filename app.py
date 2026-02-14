@@ -9,6 +9,79 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from src.data import load_dataset
+#Page Setup and color starts here
+st.markdown(
+    """
+    <style>
+
+    /* ===== Main Background ===== */
+    .stApp {
+        background: linear-gradient(135deg, #F4F7FB 0%, #E9F1FF 100%);
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    /* ===== Title Styling ===== */
+    h1, h2, h3 {
+        color: #1F3C88;
+        font-weight: 700;
+    }
+
+    /* ===== Sidebar ===== */
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #1F3C88 0%, #2952A3 100%);
+        color: white;
+    }
+
+    section[data-testid="stSidebar"] * {
+        color: white !important;
+    }
+
+    /* ===== Buttons ===== */
+    .stButton>button {
+        background: linear-gradient(90deg, #1F3C88, #4A90E2);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 0.5em 1.2em;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: 0.3s;
+    }
+
+    .stButton>button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
+    /* ===== Cards (containers) ===== */
+    div[data-testid="stMetric"],
+    div[data-testid="stDataFrame"],
+    div[data-testid="stTable"] {
+        background: white;
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    /* ===== Input Widgets ===== */
+    .stSelectbox, .stNumberInput, .stTextInput {
+        background: white;
+        border-radius: 10px;
+    }
+
+    /* ===== Progress Bar ===== */
+    .stProgress > div > div > div > div {
+        background: linear-gradient(90deg, #1F3C88, #4A90E2);
+    }
+
+    /* ===== Footer hide (optional) ===== */
+    footer {visibility: hidden;}
+
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+#Page setup and color ends here
 
 
 st.set_page_config(page_title='ML Assignment 2 - Classification Models', layout='wide')
