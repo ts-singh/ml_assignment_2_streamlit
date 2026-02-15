@@ -172,7 +172,7 @@ metrics_df = load_metrics_table()
 artifacts = load_artifacts()
 
 with st.sidebar:
-    st.header('Controls')
+    st.header('Drop Down: Select model')
     model_name = st.selectbox('Select model From Drop Down', metrics_df['ML Model Name'].tolist())
     show_holdout = st.checkbox('Show Default evaluation ', value=True)
     st.divider()
